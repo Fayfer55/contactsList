@@ -6,34 +6,40 @@
 //  Copyright © 2020 Кирилл Файфер. All rights reserved.
 //
 
-struct Person {
-    var name: String
-    var surname: String
-    var email: String
-    var phone: String
+import Foundation
+
+struct Person: Identifiable {
+    let name: String
+    let surname: String
+    let email: String
+    let phone: String
+    let id: Int
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
 }
 
 extension Person {
-    static func getPersons() -> [Person] {
-        let persons = DataManager.getManagers()
-        var personsList: [Person] = []
+    static func getManagers() -> [Person] {
         
-        for _ in 1...9 {
-            let person = Person(name: persons.names.randomElement() ?? "",
-                                surname: persons.surnames.randomElement() ?? "",
-                                email: persons.emails.randomElement() ?? "",
-                                phone: persons.phones.randomElement() ?? "")
-            
-            personsList.append(person)
-            
-            persons.deleteElement(person.name, from: &persons.names)
-            persons.deleteElement(person.surname, from: &persons.surnames)
-            persons.deleteElement(person.phone, from: &persons.phones)
-            persons.deleteElement(person.email, from: &persons.emails)
+        var persons: [Person] = []
+        
+        let names = DataManager.shared.names.shuffled()
+        let surnames = DataManager.shared.surnames.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phones = DataManager.shared.phones.shuffled()
+        
+        for index in 0..<names.count {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: emails[index],
+                phone: phones[index],
+                id: index
+            )
+            persons.append(person)
         }
-        return personsList
+        return persons
     }
-    
-    
 }
-

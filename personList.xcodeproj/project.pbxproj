@@ -13,6 +13,7 @@
 		8524E4A02507B8AE00C2AE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8524E49F2507B8AE00C2AE4D /* Assets.xcassets */; };
 		8524E4A32507B8AE00C2AE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8524E4A12507B8AE00C2AE4D /* LaunchScreen.storyboard */; };
 		8524E4AF2507B9CB00C2AE4D /* PersonsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524E4AE2507B9CB00C2AE4D /* PersonsListTableViewController.swift */; };
+		856BBED7257913330009CC04 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856BBED6257913330009CC04 /* TabBarViewController.swift */; };
 		857A70D82507BD3F00B2DD1E /* PersonsFullInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A70D72507BD3F00B2DD1E /* PersonsFullInfoTableViewController.swift */; };
 		857A70DA2507CD2400B2DD1E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A70D92507CD2400B2DD1E /* Person.swift */; };
 		857A70DD2507CDA300B2DD1E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A70DC2507CDA300B2DD1E /* DataManager.swift */; };
@@ -28,6 +29,7 @@
 		8524E4A22507B8AE00C2AE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8524E4A42507B8AE00C2AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8524E4AE2507B9CB00C2AE4D /* PersonsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListTableViewController.swift; sourceTree = "<group>"; };
+		856BBED6257913330009CC04 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		857A70D72507BD3F00B2DD1E /* PersonsFullInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsFullInfoTableViewController.swift; sourceTree = "<group>"; };
 		857A70D92507CD2400B2DD1E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		857A70DC2507CDA300B2DD1E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				8524E4AE2507B9CB00C2AE4D /* PersonsListTableViewController.swift */,
 				857A70D72507BD3F00B2DD1E /* PersonsFullInfoTableViewController.swift */,
 				85DA0F382508D0B200D9C344 /* FullInfoViewController.swift */,
+				856BBED6257913330009CC04 /* TabBarViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 		8524E4AC2507B8F700C2AE4D /* supportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8524E49F2507B8AE00C2AE4D /* Assets.xcassets */,
 				8524E4962507B8AC00C2AE4D /* AppDelegate.swift */,
 				8524E4982507B8AC00C2AE4D /* SceneDelegate.swift */,
 				8524E4A42507B8AE00C2AE4D /* Info.plist */,
@@ -105,7 +109,6 @@
 		8524E4AD2507B90A00C2AE4D /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				8524E49F2507B8AE00C2AE4D /* Assets.xcassets */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Кирилл Файфер";
 				TargetAttributes = {
 					8524E4922507B8AC00C2AE4D = {
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856BBED7257913330009CC04 /* TabBarViewController.swift in Sources */,
 				85DA0F392508D0B200D9C344 /* FullInfoViewController.swift in Sources */,
 				857A70DA2507CD2400B2DD1E /* Person.swift in Sources */,
 				857A70DD2507CDA300B2DD1E /* DataManager.swift in Sources */,
@@ -248,6 +252,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -308,6 +313,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

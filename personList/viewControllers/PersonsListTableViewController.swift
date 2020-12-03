@@ -9,8 +9,8 @@
 import UIKit
 
 class PersonsListTableViewController: UITableViewController {
-    let persons = Person.getPersons()
-
+    var persons: [Person] = []
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
@@ -20,7 +20,8 @@ class PersonsListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personsList", for: indexPath)
         
         let person = persons[indexPath.row]
-        cell.textLabel?.text = "\(person.name) \(person.surname)"
+        cell.textLabel?.text = person.fullName
+        
         
         return cell
     }
@@ -31,12 +32,5 @@ class PersonsListTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
         infoVC.person = persons[indexPath.row]
-        
-//        guard let tabBarController = segue.destination as? UITabBarController else { return }
-//        guard let secondNavigationC = tabBarController.viewControllers?.last as? UINavigationController else { return }
-//        guard let personsTableVC = secondNavigationC.viewControllers.last as? PersonsFullInfoTableViewController else { return }
-
-//        personsTableVC.persons = persons
-
     }
 }
